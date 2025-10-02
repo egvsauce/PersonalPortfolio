@@ -1,10 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import SectionHeading from "./section-heading"
 import React, { useRef } from 'react'
 import Image from "next/image";
-
 import { projectsData } from "@/lib/data"
 
 type ProjectProps = (typeof projectsData)[number];

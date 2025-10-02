@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -7,10 +7,16 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from 'react-icons/fa';
 import BubblesBackground from "@/components/bubblebackground";
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSectionInView } from '@/lib/hooks';
+
 
 export default function Intro() {
-  return (
-    <section id="home" className="scroll-mt-[100rem] flex flex-col-reverse items-center gap-10 max-w-6xl mx-auto w-full px-6 py-12 text-center
+    const { ref } = useSectionInView("Home", 0.5);
+    const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  
+    return (
+    <section ref={ref} id="home" className="scroll-mt-[100rem] flex flex-col-reverse items-center gap-10 max-w-6xl mx-auto w-full px-6 py-12 text-center
     md:flex-row md:items-center md:justify-between md:text-left md:px-16 lg:px-24 xl:px-40">
         {/*IMAGE*/}
         <div className="w-full md:w-auto"> 
@@ -94,6 +100,10 @@ export default function Intro() {
             className="group bg-gray-900 text-white px-7 
             py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 
             hover:bg-blue-300 hover:scale-110 duration-300 active:scale-105 transition"
+            onClick={() => {
+                setActiveSection("Contact");
+                setTimeOfLastClick(Date.now());
+            }}
             >
             Let's Connect! <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />{" "}
             </Link>
