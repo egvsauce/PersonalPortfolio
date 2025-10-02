@@ -1,13 +1,14 @@
 "use client";
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from "framer-motion";
 import {links} from "@/lib/data";
 import Link from 'next/link';
 import clsx from 'clsx';
-import { text } from 'stream/consumers';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Header() {
-   const [activeSection, setActiveSection] = useState('Home');
+    const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+    
     return (
     <header className="z-[999] relative">
         <motion.div className="fixed bottom-0 left-1/2 -translate-x-1/2 h-[4.5rem] w-full
@@ -24,21 +25,21 @@ export default function Header() {
 
             <ul className="flex w-full flex-wrap items-center justify-center gap-2 text-sm font-medium text-gray-500
             sm:flex-nowrap sm:gap-5">
-                {links.map(link => 
+                
+                {links.map((link) => 
                     <motion.li className="flex items-center justify-center relative" 
                     key={link.hash}
-                    initial={{y:100, opacity:0}}
+                    initial={{y:-100, opacity:0}}
                     animate={{y:0, opacity:1}}
                     >
                         <Link className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", 
-                            {text: activeSection === link.name, 
-
-                            }
+                            { 'text-gray-950': activeSection === link.name, }
                         )} 
                         href={link.hash}
-                        onClick={
-                            () => setActiveSection(link.name)
-                        }
+                        onClick={() => {
+                            setActiveSection(link.name);
+                            setTimeOfLastClick(Date.now());
+                        }}
                         >
                         {
                             link.name
