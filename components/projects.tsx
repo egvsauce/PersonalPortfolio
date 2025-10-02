@@ -6,7 +6,7 @@ import { useScroll } from "framer-motion";
 import Project from "./project";
 export default function Projects() {
   return (
-    <section>
+    <section id="projects" className="scroll-mt-18">
         <SectionHeading>My Projects
             </SectionHeading>
             <div className= "flex flex-col items-center">

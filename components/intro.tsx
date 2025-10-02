@@ -10,7 +10,7 @@ import BubblesBackground from "@/components/bubblebackground";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col-reverse items-center gap-10 max-w-6xl mx-auto w-full px-6 py-12 text-center
+    <section id="home" className="scroll-mt-[100rem] flex flex-col-reverse items-center gap-10 max-w-6xl mx-auto w-full px-6 py-12 text-center
     md:flex-row md:items-center md:justify-between md:text-left md:px-16 lg:px-24 xl:px-40">
         {/*IMAGE*/}
         <div className="w-full md:w-auto"> 
