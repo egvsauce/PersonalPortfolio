@@ -39,7 +39,7 @@ export default function About() {
         {/* Text */}
         <div className="space-y-6 text-left grid gap-6 bg-[#640008]/70 rounded-3xl ring-3 ring-black/5">
           <p className="text-gray-200 leading-relaxed rounded-xl p-5">
-            Hello! I’m{" "}
+            Hello! I'm{" "}
             <span className="font-semibold">Ethan Vasquez</span>, a Computer
             Science student and software engineer focused building clean,
             efficient, and reliable products. I have hands-on
@@ -58,7 +58,7 @@ export default function About() {
             .
           </p>
           <p className="text-gray-200 leading-relaxed rounded-xl p-5 -mt-8">
-      I’m passionate about learning new technologies and optimizing how data moves through systems. Courses like Data Structures & Algorithms and Theoretical Computer Science strengthened my interest in state management and system efficiency.
+      I'm passionate about learning new technologies and optimizing how data moves through systems. Courses like Data Structures & Algorithms and Theoretical Computer Science strengthened my interest in state management and system efficiency.
           </p>
         </div>
       </div>
