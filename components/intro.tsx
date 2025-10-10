@@ -4,13 +4,14 @@ import React from 'react';
 import Image from 'next/image'
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import BubblesBackground from "@/components/bubblebackground";
 import BubblesBackground2 from "@/components/bubblebackground2";
 import BubblesBackground3 from "@/components/bubblesbackground3";
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { useSectionInView } from '@/lib/hooks';
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { FaGithubSquare } from 'react-icons/fa';
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -123,7 +124,18 @@ export default function Intro() {
                 hover:scale-105 transition active:scale-110 focus:scale-105 duration-300 border border-black/10" href="/CV.pdf" download={true}>
                 Resume <HiDownload className="group-hover:translate-y-1 transition"/>
             </a>
-
+            <a className="bg-white-900 p-4 text-gray-600 flex items-center gap-2 rounded-full 
+            hover:text-white hover:scale-105 focus:scale-105 hover:bg-blue-950 active:scale-110 
+            transition duration-300
+            border border-black/10" href="https://linkedin.com/in/ethan-vasquez-se" target="_blank">
+                <BsLinkedin />
+            </a>
+            <a className="bg-white-900 p-4 text-gray-600 flex items-center gap-2 
+            text-[1.2rem] rounded-full active:scale-105 hover:text-white hover:bg-blue-950 
+            transition hover:scale-110 focus:scale-110 duration-300 border border-black/10"
+            href="https://github.com/egvsauce" target="_blank">
+                <FaGithubSquare />
+            </a>
 
          </motion.div>
         </section>
