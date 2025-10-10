@@ -7,7 +7,7 @@ export function ContactTiles() {
       <a
         href="mailto:ethankontakt@gmail.com"
         className="group relative 
-        rounded-[2rem] p-6 text-center justify-center items-center
+        rounded-[2rem] pb-6 pt-6 text-center justify-center items-center
         text-gray-100 shadow-md ring-1 ring-white/10 transition
         hover:-translate-y-0.5 hover:shadow-lg hover:ring-white/20"
 
@@ -27,7 +27,7 @@ export function ContactTiles() {
       {/* Phone */}
       <a
         href="tel:+15551234567"
-        className="group relative p-6 rounded-[2rem] text-center text-gray-100 shadow-md ring-1 ring-white/10 transition
+        className="group relative pb-6 pt-6 rounded-[2rem] text-center text-gray-100 shadow-md ring-1 ring-white/10 transition
              hover:-translate-y-0.5 hover:shadow-lg hover:ring-white/20"
         style={{ backgroundColor: "rgba(139, 194, 233, 1)" }}
         aria-label="Call or text Ethan"
