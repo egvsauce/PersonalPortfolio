@@ -26,11 +26,11 @@ ProjectProps) {
         <section className="bg-gray-100 max-w-[42rem]
                             border border-black/5 
                             overflow-hidden sm:pr-8 relative
-                            sm:h-[20rem] group-even:pl-8
+                            sm:h-[20rem] group-even:pl-8 group-odd:pr-8
                             hover:bg-gray-200 transition rounded-lg">
 
         <div className="pt-4 pb-10 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:w-1/2
-        flex flex-col h-full group-even:ml-[18rem]">
+        flex flex-col h-full group-even:ml-[18rem] group-odd:mr-[18rem]">
             <h3 className="mt-2 leading-relaxed text-gray-700">
                 {title}
                 </h3>

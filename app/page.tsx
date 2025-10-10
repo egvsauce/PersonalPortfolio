@@ -14,6 +14,8 @@ export default function Home() {
       <Projects /> 
       <Skills />
       <Contact />
+      <div className="pb-40">
+      </div>
     </main>
   )
 }

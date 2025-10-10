@@ -23,7 +23,7 @@ export default function Header() {
             className="flex fixed bottom-[0.75rem] left-1/2 -translate-x-1/2 h-12 w-full max-w-[36rem] px-4 py-2
         sm:bottom-[1.7rem] sm:h-[initial] sm:px-0 sm:py-0">
 
-            <ul className="flex w-full flex-wrap items-center justify-center gap-2 text-sm font-medium text-gray-500
+            <ul className="flex w-full flex-wrap items-center justify-center gap-2 text-sm font-medium text-gray-600
             sm:flex-nowrap sm:gap-5">
                 
                 {links.map((link) => 
@@ -46,7 +46,7 @@ export default function Header() {
                         }
                         {
                             link.name === activeSection && (
-                                <motion.span className="bg-pink-100 rounded-full absolute inset-0 -z-10" layoutId="activeSection" 
+                                <motion.span className="bg-stone-400 rounded-full absolute inset-0 -z-10" layoutId="activeSection" 
                                 transition={{
                                     type: "spring",
                                     stiffness: 400,

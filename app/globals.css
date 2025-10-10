@@ -8,8 +8,8 @@ html {
 @keyframes bubble-rise {
   0%   { transform: translateY(0) translateX(0); opacity: 0; }
   10%  { opacity: 0.8; }
-  50%  { transform: translateY(-50vh) translateX(8px); }
-  100% { transform: translateY(-100vh) translateX(-8px); opacity: 0; }
+  40%  { transform: translateY(-50vh) translateX(8px); opacity: 0.5 }
+  80% { transform: translateY(-100vh) translateX(-8px); opacity: 0; }
 }
 
 .bubble {

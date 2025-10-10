@@ -58,24 +58,24 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Digital Audio Workstation",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "Lightweight, fully interactive web-based DAW. Create your own beat without downloading anything!",
+    tags: ["React", "Next.js", "Tone.js", "Tailwind"],
     imageUrl: corpcommentImg,
   },
   {
-    title: "rmtDev",
+    title: "PennyPantry",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Designed to minimize food waste. Get customized recipes based on ingredients in your home!",
+    tags: ["ASP.NET Core", "C#", "React", "TypeScript", "Next.js", "Tailwind", "PostgreSQL"],
     imageUrl: rmtdevImg,
   },
   {
-    title: "Word Analytics",
+    title: "RISC-V Web Assmebly IDE",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "RISC-V Emulator where students can run labs, test code, and visualize their code running",
+    tags: ["React", "Next.js", "SQL", "Tailwind"],
     imageUrl: wordanalyticsImg,
   },
 ] as const;
@@ -90,14 +90,12 @@ export const skillsData = [
   "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
+  "Java",
+  "C/C++",
+  "C#",
+  "JavaFX",
+  "Flask",
 ] as const;

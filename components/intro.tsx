@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from 'react-icons/fa';
 import BubblesBackground from "@/components/bubblebackground";
+import BubblesBackground2 from "@/components/bubblebackground2";
+import BubblesBackground3 from "@/components/bubblesbackground3";
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { useSectionInView } from '@/lib/hooks';
-
-
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5);
     const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -20,14 +19,14 @@ export default function Intro() {
     md:flex-row md:items-center md:justify-between md:text-left md:px-16 lg:px-24 xl:px-40">
         {/*IMAGE*/}
         <div className="w-full md:w-auto"> 
-            <div className="relative z-20 flex justify-center md:block">
+            <div className="z-20 flex justify-center md:block relative">
                 <motion.div
                     initial = {{opacity:0, scale:0}}
                     animate = {{opacity:1, scale:1}} 
                     transition={{
                         type:"tween",
                         duration:0.3,
-                    }}   
+                    }} 
                 >
                 <Image
                   src="/portrait.jpg"
@@ -49,13 +48,21 @@ export default function Intro() {
                         damping:10,
                         delay:0.2
                     }}   
+                    className="
+                        absolute 
+                        bottom-0 left-1/2 translate-x-12 translate-y-1
+                        md:bottom-2 md:right-2 md:left-auto md:translate-x-0 md:translate-y-0
+                        lg:bottom-3 lg:right-4
+                    "
                     >
-                    <span className="absolute bottom-0 right-4 text-4xl md:right-0 md:text-5xl">
+                    <span className="text-4xl md:text-5xl">
                         🫰
                     </span>
                 </motion.div>
             </div>
         </div>
+        <BubblesBackground2 />
+        <BubblesBackground3 />
         <BubblesBackground />
         {/*INTRO TEXT*/}
         <section className="space-y-4 z-50">
@@ -76,6 +83,8 @@ export default function Intro() {
                 <h1 className="text-4xl font-bold md:text-5xl"> 
                    Ethan Vasquez
                 </h1>
+
+
                 
             </motion.div>
             <motion.div
@@ -114,19 +123,7 @@ export default function Intro() {
                 Resume <HiDownload className="group-hover:translate-y-1 transition"/>
             </a>
 
-            <a className="bg-white-900 p-4 text-gray-600 flex items-center gap-2 rounded-full 
-            hover:text-white hover:scale-105 focus:scale-105 hover:bg-blue-950 active:scale-110 
-            transition duration-300
-            border border-black/10" href="https://linkedin.com/in/ethan-vasquez-se" target="_blank">
-                <BsLinkedin />
-            </a>
 
-            <a className="bg-white-900 p-4 text-gray-600 flex items-center gap-2 
-            text-[1.2rem] rounded-full active:scale-105 hover:text-white hover:bg-blue-950 
-            transition hover:scale-110 focus:scale-110 duration-300 border border-black/10"
-            href="https://github.com/egvsauce" target="_blank">
-                <FaGithubSquare />
-            </a>
          </motion.div>
         </section>
 

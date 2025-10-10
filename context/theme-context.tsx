@@ -21,30 +21,25 @@ export default function ThemeContextProvider({
   const [theme, setTheme] = useState<Theme>("light");
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
+    // Dark mode is intentionally disabled for this site.
+    // Keep the theme permanently light and remove any `.dark` class.
+    setTheme("light");
+    try {
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
+    } catch (e) {
+      // ignore if window is not available or storage fails
     }
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-
-    if (localTheme) {
-      setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
+    // Ensure theme is always light. Clear any stored dark preference and
+    // remove the `.dark` class if present.
+    try {
+      window.localStorage.setItem("theme", "light");
+    } catch (e) {}
+    document.documentElement.classList.remove("dark");
+    setTheme("light");
   }, []);
 
   return (

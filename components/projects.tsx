@@ -11,7 +11,10 @@ export default function Projects() {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-        <SectionHeading>My Projects
+        <p className="text-center text-xs uppercase tracking-[0.2em] text-gray-500">
+          My Recent Projects
+        </p>
+        <SectionHeading>Portfolio
             </SectionHeading>
             <div className= "flex flex-col items-center">
                 {projectsData.map((project, index) => (
