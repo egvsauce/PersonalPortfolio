@@ -1,5 +1,6 @@
 "use client";
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image'
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -72,7 +73,7 @@ export default function Intro() {
                 transition={{duration:0.5}}
                 >
                 <h1 className="text-base text-gray-600 md:text-lg"> 
-                    Hello! I'm
+                    Hello! I&apos;m
                 </h1>
             </motion.div>
             <motion.div 
@@ -114,7 +115,7 @@ export default function Intro() {
                 setTimeOfLastClick(Date.now());
             }}
             >
-            Let's Connect! <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />{" "}
+            Let&apos;s Connect! <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />{" "}
             </Link>
 
             <a className="group bg-white-900 px-7 
