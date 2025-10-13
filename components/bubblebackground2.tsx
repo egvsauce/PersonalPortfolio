@@ -22,8 +22,8 @@ export default function BubblesBackground2() {
     const count = 3;
     const generated = Array.from({ length: count }, () => {
       const size = rand(600, 800); // px
-      const durationSec = rand(30, 50);
-      const delaySec = rand(0, 15);
+      const durationSec = rand(10, 30);
+      const delaySec = rand(0, 1);
       // Use lighter opacities so the background wash stays subtle
       const opacity = Number((rand(50, 85) / 100).toFixed(2)); // 0.15–0.50
       const vSlot = pick<"top" | "middle" | "bottom">(["top", "middle", "bottom"]);

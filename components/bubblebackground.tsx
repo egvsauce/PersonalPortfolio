@@ -19,11 +19,11 @@ export default function BubblesBackground() {
 
   React.useEffect(() => {
     // Generate only on the client to avoid hydration mismatch
-    const count = 3;
+    const count = 2;
     const generated = Array.from({ length: count }, () => {
       const size = rand(700, 900); // px
-      const durationSec = rand(30, 55);
-      const delaySec = rand(0, 10);
+      const durationSec = rand(20, 40);
+      const delaySec = rand(0, 1);
       const opacity = Number((rand(20,40) / 100).toFixed(2)); // 0.20–0.55
       
       const vSlot = pick<"top" | "middle" | "bottom">(["top", "middle", "bottom"]);

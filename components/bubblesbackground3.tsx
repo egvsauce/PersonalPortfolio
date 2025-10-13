@@ -23,9 +23,9 @@ export default function BubblesBackground3() {
     const generated = Array.from({ length: count }, () => {
       const size = rand(700,800); // px
       const leftPct = rand(0, 100); // %
-      const durationSec = rand(30, 55);
+      const durationSec = rand(10,30);
       const bottomPx = rand(0,100);
-      const delaySec = rand(0, 10);
+      const delaySec = rand(0, 1);
       const opacity = Number((rand(39, 50) / 100).toFixed(2)); // 0.35–0.80
       const vSlot = pick<"top" | "middle" | "bottom">(["top", "middle", "bottom"]);
       const hSlot = pick<"left" | "middle" | "right">(["left", "middle", "right"]);
