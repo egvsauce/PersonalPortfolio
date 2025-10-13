@@ -21,8 +21,8 @@ export default function BubblesBackground2() {
     // Generate only on the client to avoid hydration mismatch
     const count = 3;
     const generated = Array.from({ length: count }, () => {
-      const size = rand(700, 1100); // px
-      const durationSec = rand(20, 50);
+      const size = rand(600, 800); // px
+      const durationSec = rand(30, 50);
       const delaySec = rand(0, 15);
       // Use lighter opacities so the background wash stays subtle
       const opacity = Number((rand(50, 85) / 100).toFixed(2)); // 0.15–0.50
