@@ -5,18 +5,3 @@ html {
   --line-color:#e5e7eb;
 }
 
-@keyframes bubble-rise {
-  0%   { transform: translateY(0) translateX(0); opacity: 0; }
-  10%  { opacity: 0.8; }
-  40%  { transform: translateY(-50vh) translateX(8px); opacity: 0.5 }
-  80% { transform: translateY(-100vh) translateX(-8px); opacity: 0; }
-}
-
-.bubble {
-  border-radius: 9999px;
-  filter: blur(0px);
-  will-change: transform, opacity;
-  animation-name: bubble-rise;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
