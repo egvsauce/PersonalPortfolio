@@ -31,7 +31,7 @@ export default function Contact() {
                 Feel free to message me through this form or directly by:
               </p>
               <p className="text-center text-xs text-gray-800 font-thin">
-                <a>ethankontakt@gmail.com </a>
+                <a>ethan@ethan-vasquez.com</a>
                 | +1 480-717-7795 
               </p>
               </div>
